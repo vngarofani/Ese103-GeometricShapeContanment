@@ -1,6 +1,6 @@
 package geometricshapes;
 
-public class Circle {
+public class Circle extends GeometricShape{
 	
 	double xc;
 	double yc;
@@ -103,19 +103,5 @@ public class Circle {
 		return true;
 	}
 
-	public boolean contains(Circle c){
-		return (this.getXMin() <= c.getXMin()) &&
-			   (this.getYMin() <= c.getYMin()) &&
-			   (c.getXMax() <= this.getXMax()) &&
-			   (c.getYMax() <= this.getYMax());
-	}
-	
-	public boolean contains(Triangle triangolo) {
-		boolean ritorna = false;
-		if ((this.getXMin() <= triangolo.getXMin() && this.getYMin() <= triangolo.getYMin())
-			&& (this.getXMax() >= triangolo.getXMax() && this.getYMax() >= triangolo.getYMax()))
-			ritorna = true;
-		return ritorna;
-		}
 
 }
